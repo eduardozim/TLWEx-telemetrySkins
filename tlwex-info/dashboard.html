@@ -1,0 +1,76 @@
+﻿<div class="dashboard game-connected">
+    <div class="hasJob">
+        <!-- meters -->
+        <!--
+            Attributes:
+            data-min-angle: angle in degress for the arrow for data-min value (0 = vertical, negative = left, positive = right)
+            data-max-angle: angle in degress for the arrow for data-max value (0 = vertical, negative = left, positive = right)
+            data-min: minimal possible value (as in JSON response), you may also use any telemetry property name for dynamic values
+            data-max: maximum possible value (as in JSON response), you may also use any telemetry property name for dynamic values
+            -->
+        <div class="truck-speed" data-type="meter" data-min="0" data-max="140" data-min-angle="-114" data-max-angle="+114"></div>
+        <div class="truck-speedRounded"></div>
+        <div class="truck-engineRpm" data-type="meter" data-min="0" data-max="24" data-min-angle="-97" data-max-angle="+97"></div>
+        <div class="truck-fuel" data-type="meter" data-min="0" data-max="truck.fuelCapacity" data-min-angle="-96" data-max-angle="0"></div>
+        <div class="truck-waterTemperature" data-type="meter" data-min="0" data-max="100" data-min-angle="-96" data-max-angle="0"></div>
+        <div class="truck-odometer"></div>
+        <div class="truck-cruiseControlSpeedRounded"></div>
+        <div class="truck-gear"></div>
+        <!-- indicators -->
+        <div class="truck-blinkerLeftOn"></div>
+        <div class="truck-blinkerRightOn"></div>
+        <div class="truck-cruiseControlOn"></div>
+        <div class="truck-lightsBeamHighOn"></div>
+        <div class="truck-lightsBeamLowOn"></div>
+        <div class="truck-lightsParkingOn"></div>
+        <div class="trailer-attached"></div>
+        <div class="image-tlw"></div>
+        <div class="trailer-mass"><span class="ton">t</span></div>
+        <div class="trailer-name"></div>
+        <div class="truck-modeltype"></div>
+        <!-- fuel information -->
+        <table class="_fuel">
+            <tr>
+                <th>Combustível</th>
+                <th>Média</th>
+                <th>Autonomia</th>
+            </tr>
+               <tr>
+                <td><span class="truck-fuelnumber"></span></td>
+                <td><span class="truck-fuelAverageConsumptionlpkm"></span></td>
+                <td><span class="truck-autonomy"></span></td>
+               </tr> 
+               <tr>
+                <td> </td>
+                <td><span class="truck-fuelAverageConsumptionkmpl"></span></td>
+                <td> </td>
+               </tr> 
+        <!-- job information -->
+        </table>
+        <table class="_job">
+            <tr>
+                <th>Horário:</th>
+                <td><span class="game-time"></span><span class="statusMessage"></span></td>
+            </tr>
+            <tr>
+                <th>Restando:</th>
+                <td><span class="job-remainingTime"></span> <span class="_jobIncome">(P$ <span class="job-income"></span>)</span></td>
+            </tr>
+            <tr>
+                <th>Origem:</th>
+                <td><span class="hasJob _jobSource"><span class="job-sourceCity"></span> (<span class="job-sourceCompany"></span>)</span></td>
+            </tr>
+            <tr>
+                <th>Destino:</th>
+                <td><span class="hasJob _jobDestionation"><span class="job-destinationCity"></span> (<span class="job-destinationCompany"></span>)</span></td>
+            </tr>
+        </table>
+        <div class="_truckWearInfo">Dano <br/>Caminhão: <span class="truck-wearSum"></span></div>
+		<div class="_truckWearCabin">Dano <br/>Cabine: <span class="truck-wearCabin"></span></div>
+		<div class="_truckWearChassis">Dano <br/>Chassi: <span class="truck-wearChassis"></span></div>
+		<div class="_truckWearEngine">Dano <br/>Motor: <span class="truck-wearEngine"></span></div>
+		<div class="_truckWearTransmission">Dano <br/>Transmissão: <span class="truck-wearTransmission"></span></div>
+		<div class="_truckWearWheels">Dano <br/>Rodas: <span class="truck-wearWheels"></span></div>
+        <div class="_trailerWearInfo">Dano <br/>Trailer: <span class="trailer-wear"></span></div>
+    </div>
+</div>
